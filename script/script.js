@@ -82,6 +82,11 @@ function setupEventListeners() {
 
     document.getElementById('cart-trigger').addEventListener('click', toggleCart);
     document.getElementById('close-cart-btn').addEventListener('click', toggleCart);
+
+document.getElementById('cart-trigger').addEventListener('click', toggleCart);
+document.getElementById('floating-cart-btn').addEventListener('click', toggleCart); 
+
+document.getElementById('close-cart-btn').addEventListener('click', toggleCart);
     document.querySelector('.cart-overlay').addEventListener('click', toggleCart);
 
     openWizardBtn.addEventListener('click', openWizard);
@@ -168,16 +173,27 @@ function updateQty(productId, change) {
     updateCartState();
 }
 
-
 function updateCartState() {
     const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+    
     cartCountBadge.textContent = totalItems;
+
+    const floatingBtn = document.getElementById('floating-cart-btn');
+    const floatingBadge = document.getElementById('floating-badge');
+    
+    if (floatingBadge) floatingBadge.textContent = totalItems;
+
+    if (totalItems > 0) {
+        floatingBtn.classList.remove('hidden');
+    } else {
+        floatingBtn.classList.add('hidden');
+    }
 
     document.querySelectorAll('.product-card').forEach(card => {
         const id = card.dataset.id;
         const qtySpan = card.querySelector('.qty-count');
         const cartItem = cart.find(item => item.id === id);
-
+        
         if (cartItem) {
             card.classList.add('selected');
             qtySpan.textContent = cartItem.qty;
@@ -455,20 +471,17 @@ function sendToWhatsApp() {
 
     const orderId = Math.floor(1000 + Math.random() * 9000);
     
-    // 1. Montamos a mensagem como texto normal (usando \n para pular linha)
     let text = `NOVO PEDIDO DO SITE\n`;
     text += `Cliente: ${name}\n`;
     text += `Tel: ${phone}\n`;
     text += `Endereço: ${address}\n`;
     text += `Pagamento: ${payment}\n\n`;
 
-    // Separar itens
     const instantItems = cart.filter(i => i.type === 'instant');
     const kitItems = cart.filter(i => i.type === 'kit-festa');
     const deliveryModeRadio = document.querySelector('input[name="delivery-mode"]:checked');
     const deliveryMode = deliveryModeRadio ? deliveryModeRadio.value : null;
 
-    // Bloco de Pronta Entrega
     if (instantItems.length > 0) {
         text += `━━━━━━━━━━━━━━━━━━\n`;
         text += `PARA AGORA (Pronta Entrega):\n`;

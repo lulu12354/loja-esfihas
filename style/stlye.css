@@ -252,6 +252,43 @@ img {
     gap: 20px;
 }
 
+.hero-card .card-content h2 {
+
+    font-size: 2.4rem;
+    line-height: 1.1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-gold);
+    text-shadow:
+        2px 2px 0px #000,
+        0 0 20px rgba(0, 0, 0, 0.8);
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+}
+
+
+.hero-card:hover .card-content h2 {
+    transform: scale(1.05);
+    text-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+}
+
+
+.hero-card .card-content p {
+    font-size: 1rem;
+    color: #FFFFFF;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+    opacity: 0.9;
+    max-width: 90%;
+}
+
+/* === AJUSTE PARA CELULAR (MOBILE) === */
+@media (max-width: 768px) {
+    .hero-card .card-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
 .hero-card {
     position: relative;
     height: 350px;
@@ -353,7 +390,7 @@ img {
 
 .product-card h3 {
     margin: 0 0 5px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 1.3;
 }
 

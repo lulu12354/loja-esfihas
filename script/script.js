@@ -61,88 +61,90 @@ const PIZZA_DATA = {
 // === 3. BANCO DE DADOS DE PRODUTOS COMPLETO ===
 const productsDB = [
     // --- SEÇÃO 1: HITS DA SEMANA ---
-    { id: 'hit-brigadeiro', name: 'Esfiha Brigadeiro Gourmet', price: 12.90, type: 'instant', category: 'hits', desc: 'Massa artesanal com muito brigadeiro.', img: 'img/esfiha-brigadeiro.webp' },
-    { id: 'hit-pastel', name: 'Pastel Frango c/ Catupiry', price: 15.90, type: 'instant', category: 'hits', desc: 'Gigante e sequinho.', img: 'img/pastel-frango.webp' },
+    { id: 'hit-brigadeiro', name: 'Esfiha Brigadeiro Gourmet', price: 12.90, type: 'instant', category: 'hits', desc: 'Massa artesanal com muito brigadeiro.', img: 'img/hits-esfiha-brigadeiro.webp' },
+    { id: 'hit-pastel', name: 'Pastel Frango c/ Catupiry', price: 15.90, type: 'instant', category: 'hits', desc: 'Recheio generoso e suculento. A combinação mais amada do Brasil.', img: 'img/hits-frango-catupiry.webp' },
 
     // --- SEÇÃO 2: SELECTION PACKS (COMBOS) ---
-    { id: 'combo-10-esfihas', name: 'Pack 10 Esfihas da Casa', price: 69.90, oldPrice: 89.90, discount: '-22%', type: 'combo-trigger', category: 'combos', desc: 'Escolha 10 sabores.', maxSelections: 10, img: 'img/combo-esfihas.webp', allowedFlavors: SABORES_ESFIHA_TODOS },
-    { id: 'combo-4-pasteis', name: 'Pack 4 Pastéis da Casa', price: 59.90, oldPrice: 69.00, discount: '-14%', type: 'combo-trigger', category: 'combos', desc: 'Escolha 4 sabores.', maxSelections: 4, img: 'img/combo-pasteis.webp', allowedFlavors: SABORES_PASTEL_TODOS },
+    { id: 'combo-10-esfihas', name: 'Pack 10 Esfihas da Casa', price: 69.90, oldPrice: 89.90, discount: '-22%', type: 'combo-trigger', category: 'combos', desc: 'Escolha 10 sabores.', maxSelections: 10, img: 'img/combo-esfiha-10.webp', allowedFlavors: SABORES_ESFIHA_TODOS },
+    { id: 'combo-4-pasteis', name: 'Pack 4 Pastéis da Casa', price: 59.90, oldPrice: 69.00, discount: '-14%', type: 'combo-trigger', category: 'combos', desc: 'Escolha 4 sabores.', maxSelections: 4, img: 'img/combo-pastel-4.webp', allowedFlavors: SABORES_PASTEL_TODOS },
 
     // --- SEÇÃO 3: COMBOS COCA-COLA ---
-    { id: 'coke-trio', name: 'Trio Favorito + Coca 350ml', price: 39.90, oldPrice: 49.90, discount: '-20%', type: 'combo-trigger', category: 'coca-combos', desc: '3 Esfihas + 1x Lata.', maxSelections: 3, fixedItem: '1x Coca-Cola 350ml', img: 'img/combo-coca-trio.webp', allowedFlavors: SABORES_ESFIHA_TODOS },
-    { id: 'coke-pastel-party', name: 'Party Pastel (6un) + Coca 2L', price: 89.90, oldPrice: 109.00, discount: '-18%', type: 'combo-trigger', category: 'coca-combos', desc: '6 Pastéis + 1x Coca 2L.', maxSelections: 6, fixedItem: '1x Coca-Cola 2L', img: 'img/combo-coca-pastel.webp', allowedFlavors: SABORES_PASTEL_TODOS },
-    { id: 'coke-family-12', name: 'Family Feast (12un) + Coca 2L', price: 99.90, oldPrice: 129.90, discount: '-23%', type: 'combo-trigger', category: 'coca-combos', desc: '12 Esfihas + Coca 2L.', maxSelections: 12, fixedItem: '1x Coca-Cola 2L', img: 'img/combo-coca-12.webp', allowedFlavors: SABORES_ESFIHA_TODOS },
-    { id: 'coke-double-date', name: 'Double Date (6un) + 2x Latas', price: 68.90, type: 'combo-trigger', category: 'coca-combos', desc: '6 Esfihas + 2x Latas.', maxSelections: 6, fixedItem: '2x Coca-Cola 350ml', img: 'img/combo-coca-6.webp', allowedFlavors: SABORES_ESFIHA_TODOS },
+    { id: 'coke-trio', name: 'Trio Favorito + Coca 350ml', price: 39.90, oldPrice: 49.90, discount: '-20%', type: 'combo-trigger', category: 'coca-combos', desc: '3 Esfihas + 1x Lata.', maxSelections: 3, fixedItem: '1x Coca-Cola 350ml', img: 'img/combo-coca-esfiha.webp', allowedFlavors: SABORES_ESFIHA_TODOS },
+    { id: 'coke-pastel-party', name: 'Party Pastel (6un) + Coca 2L', price: 89.90, oldPrice: 109.00, discount: '-18%', type: 'combo-trigger', category: 'coca-combos', desc: '6 Pastéis + 1x Coca 2L.', maxSelections: 6, fixedItem: '1x Coca-Cola 2L', img: 'img/combo-cola-pastel.webp', allowedFlavors: SABORES_PASTEL_TODOS },
+    { id: 'coke-family-12', name: 'Family Feast (12un) + Coca 2L', price: 99.90, oldPrice: 129.90, discount: '-23%', type: 'combo-trigger', category: 'coca-combos', desc: '12 Esfihas + Coca 2L.', maxSelections: 12, fixedItem: '1x Coca-Cola 2L', img: 'img/combo-cola-12-esfihas.webp', allowedFlavors: SABORES_ESFIHA_TODOS },
+    { id: 'coke-double-date', name: 'Double Date (6un) + 2x Latas', price: 68.90, type: 'combo-trigger', category: 'coca-combos', desc: '6 Esfihas + 2x Latas.', maxSelections: 6, fixedItem: '2x Coca-Cola 350ml', img: 'img/combo-cola-6-esfihas.webp', allowedFlavors: SABORES_ESFIHA_TODOS },
 
     // --- SEÇÃO 4: PIZZAS SALGADAS ---
-    { id: 'pizza-broto-2s', name: 'Broto Salgada (2 Sabores)', price: 39.90, type: 'pizza-builder', category: 'pizzas', desc: '4 Pedaços.', mode: 'half', size: 'broto', img: 'img/pizza-2-sabores.webp' },
-    { id: 'pizza-broto-1s', name: 'Broto Salgada (1 Sabor)', price: 39.90, type: 'pizza-builder', category: 'pizzas', desc: '4 Pedaços.', mode: 'whole', size: 'broto', img: 'img/pizza-1-sabor.webp' },
-    { id: 'pizza-grande-2s', name: 'Grande Salgada (2 Sabores)', price: 65.90, type: 'pizza-builder', category: 'pizzas', desc: '8 Pedaços.', mode: 'half', size: 'grande', img: 'img/pizza-grande-2.webp' },
-    { id: 'pizza-grande-1s', name: 'Grande Salgada (1 Sabor)', price: 65.90, type: 'pizza-builder', category: 'pizzas', desc: '8 Pedaços.', mode: 'whole', size: 'grande', img: 'img/pizza-grande-1.webp' },
-    { id: 'pizza-gigante-2s', name: 'Gigante Salgada (2 Sabores)', price: 79.90, type: 'pizza-builder', category: 'pizzas', desc: '12 Pedaços.', mode: 'half', size: 'gigante', img: 'img/pizza-gigante-2.webp' },
-    { id: 'pizza-gigante-1s', name: 'Gigante Salgada (1 Sabor)', price: 79.90, type: 'pizza-builder', category: 'pizzas', desc: '12 Pedaços.', mode: 'whole', size: 'gigante', img: 'img/pizza-gigante-1.webp' },
+    { id: 'pizza-broto-2s', name: 'Broto Salgada (2 Sabores)', price: 39.90, type: 'pizza-builder', category: 'pizzas', desc: '4 Pedaços.', mode: 'half', size: 'broto', img: 'img/4-pizza-2-sabores.webp' },
+    { id: 'pizza-broto-1s', name: 'Broto Salgada (1 Sabor)', price: 39.90, type: 'pizza-builder', category: 'pizzas', desc: '4 Pedaços.', mode: 'whole', size: 'broto', img: 'img/4-pizza-1-sabor.webp' },
+    { id: 'pizza-grande-2s', name: 'Grande Salgada (2 Sabores)', price: 65.90, type: 'pizza-builder', category: 'pizzas', desc: '8 Pedaços.', mode: 'half', size: 'grande', img: 'img/4-pizza-2-sabores.webp' },
+    { id: 'pizza-grande-1s', name: 'Grande Salgada (1 Sabor)', price: 65.90, type: 'pizza-builder', category: 'pizzas', desc: '8 Pedaços.', mode: 'whole', size: 'grande', img: 'img/4-pizza-1-sabor.webp' },
+    { id: 'pizza-broto-2s', name: 'Broto Salgada (2 Sabores)', price: 39.90, type: 'pizza-builder', category: 'pizzas', desc: '4 Pedaços.', mode: 'half', size: 'broto', img: 'img/4-pizza-2-sabores.webp' },
+    { id: 'pizza-broto-2s', name: 'Broto Salgada (2 Sabores)', price: 39.90, type: 'pizza-builder', category: 'pizzas', desc: '4 Pedaços.', mode: 'half', size: 'broto', img: 'img/4-pizza-2-sabores.webp' },
+    { id: 'pizza-gigante-2s', name: 'Gigante Salgada (2 Sabores)', price: 79.90, type: 'pizza-builder', category: 'pizzas', desc: '12 Pedaços.', mode: 'half', size: 'gigante', img: 'img/4-pizza-2-sabores.webp' },
+    { id: 'pizza-gigante-1s', name: 'Gigante Salgada (1 Sabor)', price: 79.90, type: 'pizza-builder', category: 'pizzas', desc: '12 Pedaços.', mode: 'whole', size: 'gigante', img: 'img/4-pizza-1-sabor.webp' },
 
     // --- SEÇÃO 5: ESFIHAS SALGADAS ---
     // Promos 50%
-    { id: 'esf-frango-cat', name: 'Frango c/ Catupiry', price: 9.90, oldPrice: 19.90, discount: '-50%', type: 'instant', category: 'esfihas-salgadas', desc: 'Campeão de vendas.', img: 'img/esfiha-frango-cat.webp' },
-    { id: 'esf-carne-queijo', name: 'Carne c/ Queijo', price: 9.90, oldPrice: 19.90, discount: '-50%', type: 'instant', category: 'esfihas-salgadas', desc: 'Carne e mussarela.', img: 'img/esfiha-carne-queijo.webp' },
-    { id: 'esf-carne-milho', name: 'Carne, Queijo e Milho', price: 9.90, oldPrice: 19.90, discount: '-50%', type: 'instant', category: 'esfihas-salgadas', desc: 'Completa.', img: 'img/esfiha-carne-milho.webp' },
+    { id: 'esf-frango-cat', name: 'Frango c/ Catupiry', price: 9.90, oldPrice: 19.90, discount: '-50%', type: 'instant', category: 'esfihas-salgadas', desc: 'Campeão de vendas.', img: 'img/5-esfiha-frango-catupiry.webp' },
+    { id: 'esf-carne-queijo', name: 'Carne c/ Queijo', price: 9.90, oldPrice: 19.90, discount: '-50%', type: 'instant', category: 'esfihas-salgadas', desc: 'Carne e mussarela.', img: 'img/5-esfiha-carne-queijo.webp' },
+    { id: 'esf-carne-milho', name: 'Carne, Queijo e Milho', price: 9.90, oldPrice: 19.90, discount: '-50%', type: 'instant', category: 'esfihas-salgadas', desc: 'Completa.', img: 'img/5-esfiha-CarneQueijoMilho.webp' },
     // Normais 9,90
-    { id: 'esf-4queijos', name: '4 Queijos', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Mussarela, provolone, parmesão e catupiry.', img: 'img/esfiha-4queijos.webp' },
-    { id: 'esf-frango-queijo', name: 'Frango c/ Queijo', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Frango com mussarela.', img: 'img/esfiha-frango-queijo.webp' },
-    { id: 'esf-milho', name: 'Milho', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Milho e mussarela.', img: 'img/esfiha-milho.webp' },
-    { id: 'esf-italiana', name: 'Italiana', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Salame e queijo.', img: 'img/esfiha-italiana.webp' },
-    { id: 'esf-2queijos', name: '2 Queijos', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Mussarela e catupiry.', img: 'img/esfiha-2queijos.webp' },
-    { id: 'esf-portuguesa', name: 'Portuguesa', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Completa.', img: 'img/esfiha-portuguesa.webp' },
-    { id: 'esf-frango-brocolis', name: 'Frango c/ Brócolis', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Leve.', img: 'img/esfiha-brocolis.webp' },
-    { id: 'esf-americana', name: 'Americana', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Bacon e ovo.', img: 'img/esfiha-americana.webp' },
-    { id: 'esf-frango-simples', name: 'Frango', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Temperado.', img: 'img/esfiha-frango.webp' },
-    { id: 'esf-romana', name: 'Romana', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Aliche.', img: 'img/esfiha-romana.webp' },
-    { id: 'esf-mexicana', name: 'Mexicana', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Picante.', img: 'img/esfiha-mexicana.webp' },
-    { id: 'esf-brocolis-alho', name: 'Brócolis e Alho', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Ao alho e óleo.', img: 'img/esfiha-brocolis.webp' },
-    { id: 'esf-coalho', name: 'Queijo Coalho', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Nordestina.', img: 'img/esfiha-coalho.webp' },
-    { id: 'esf-marguerita', name: 'Marguerita', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Manjericão.', img: 'img/esfiha-marguerita.webp' },
-    { id: 'esf-mussarela', name: 'Mussarela', price: 8.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Clássica.', img: 'img/esfiha-mussarela.webp' },
+    { id: 'esf-4queijos', name: '4 Queijos', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Mussarela, provolone, parmesão e catupiry.', img: 'img/5-esfiha-4Queijos.webp' },
+    { id: 'esf-frango-queijo', name: 'Frango c/ Queijo', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Frango com mussarela.', img: 'img/5-esfiha-frangoQueijo.webp' },
+    { id: 'esf-milho', name: 'Milho', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Milho e mussarela.', img: 'img/5-esfiha-milho.webp' },
+    { id: 'esf-italiana', name: 'Italiana', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Salame e queijo.', img: 'img/5-esfiha-italiana.webp' },
+    { id: 'esf-2queijos', name: '2 Queijos', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Mussarela e catupiry.', img: 'img/5-esfiha-2queijos.webp' },
+    { id: 'esf-portuguesa', name: 'Portuguesa', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Completa.', img: 'img/5-esfiha-portugues.webp' },
+    { id: 'esf-frango-brocolis', name: 'Frango c/ Brócolis', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Leve.', img: 'img/5-esfiha-frango-brocolis.webp' },
+    { id: 'esf-americana', name: 'Americana', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Bacon e ovo.', img: 'img/5-esfiha-americana.webp' },
+    { id: 'esf-frango-simples', name: 'Frango', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Temperado.', img: 'img/5-esfiha-frango.webp' },
+    { id: 'esf-romana', name: 'Romana', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Aliche.', img: 'img/5-esfiha-Romana.webp' },
+    { id: 'esf-mexicana', name: 'Mexicana', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Picante.', img: 'img/5-esfiha-mexicana.webp' },
+    { id: 'esf-brocolis-alho', name: 'Brócolis e Alho', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Ao alho e óleo.', img: 'img/5-esfiha-brocolisAlho.webp' },
+    { id: 'esf-coalho', name: 'Queijo Coalho', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Nordestina.', img: 'img/5-esfiha-queijoCoalho.webp' },
+    { id: 'esf-marguerita', name: 'Marguerita', price: 9.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Manjericão.', img: 'img/5-esfiha-marguerita.webp' },
+    { id: 'esf-mussarela', name: 'Mussarela', price: 8.90, type: 'instant', category: 'esfihas-salgadas', desc: 'Clássica.', img: 'img/5-esfiha-mussarela.webp' },
 
     // --- SEÇÃO 6: PIZZAS DOCES ---
-    { id: 'pizza-doce-broto-2s', name: 'Broto Doce (2 Sabores)', price: 44.90, type: 'pizza-builder', category: 'pizzas-doces', desc: '4 Pedaços.', mode: 'half', size: 'broto', isSweet: true, img: 'img/pizza-doce.webp' },
-    { id: 'pizza-doce-broto-1s', name: 'Broto Doce (1 Sabor)', price: 44.90, type: 'pizza-builder', category: 'pizzas-doces', desc: '4 Pedaços.', mode: 'whole', size: 'broto', isSweet: true, img: 'img/pizza-doce-1.webp' },
-    { id: 'pizza-doce-grande-2s', name: 'Grande Doce (2 Sabores)', price: 74.90, type: 'pizza-builder', category: 'pizzas-doces', desc: '8 Pedaços.', mode: 'half', size: 'grande', isSweet: true, img: 'img/pizza-doce-grande.webp' },
-    { id: 'pizza-doce-grande-1s', name: 'Grande Doce (1 Sabor)', price: 74.90, type: 'pizza-builder', category: 'pizzas-doces', desc: '8 Pedaços.', mode: 'whole', size: 'grande', isSweet: true, img: 'img/pizza-doce-grande.webp' },
-    { id: 'pizza-doce-gigante-2s', name: 'Gigante Doce (2 Sabores)', price: 87.90, type: 'pizza-builder', category: 'pizzas-doces', desc: '12 Pedaços.', mode: 'half', size: 'gigante', isSweet: true, img: 'img/pizza-doce-gigante.webp' },
-    { id: 'pizza-doce-gigante-1s', name: 'Gigante Doce (1 Sabor)', price: 87.90, type: 'pizza-builder', category: 'pizzas-doces', desc: '12 Pedaços.', mode: 'whole', size: 'gigante', isSweet: true, img: 'img/pizza-doce-gigante.webp' },
+    { id: 'pizza-doce-broto-2s', name: 'Broto Doce (2 Sabores)', price: 44.90, type: 'pizza-builder', category: 'pizzas-doces', desc: '4 Pedaços.', mode: 'half', size: 'broto', isSweet: true, img: 'img/6-pizza-broto2.webp' },
+    { id: 'pizza-doce-broto-1s', name: 'Broto Doce (1 Sabor)', price: 44.90, type: 'pizza-builder', category: 'pizzas-doces', desc: '4 Pedaços.', mode: 'whole', size: 'broto', isSweet: true, img: 'img/6-pizza-broto1.webp' },
+    { id: 'pizza-doce-grande-2s', name: 'Grande Doce (2 Sabores)', price: 74.90, type: 'pizza-builder', category: 'pizzas-doces', desc: '8 Pedaços.', mode: 'half', size: 'grande', isSweet: true, img: 'img/6-pizza-grande2.webp' },
+    { id: 'pizza-doce-grande-1s', name: 'Grande Doce (1 Sabor)', price: 74.90, type: 'pizza-builder', category: 'pizzas-doces', desc: '8 Pedaços.', mode: 'whole', size: 'grande', isSweet: true, img: 'img/6-pizza-broto1.webp' },
+    { id: 'pizza-doce-gigante-2s', name: 'Gigante Doce (2 Sabores)', price: 87.90, type: 'pizza-builder', category: 'pizzas-doces', desc: '12 Pedaços.', mode: 'half', size: 'gigante', isSweet: true, img: 'img/6-pizza-grande2.webp' },
+    { id: 'pizza-doce-gigante-1s', name: 'Gigante Doce (1 Sabor)', price: 87.90, type: 'pizza-builder', category: 'pizzas-doces', desc: '12 Pedaços.', mode: 'whole', size: 'gigante', isSweet: true, img: 'img/6-pizza-grande1.webp' },
 
     // --- SEÇÃO 7: ESFIHAS DOCES ---
-    { id: 'esf-doce-leite', name: 'Doce de Leite', price: 12.90, type: 'instant', category: 'esfihas-doces', desc: 'Argentino.', img: 'img/esfiha-doce.webp' },
-    { id: 'esf-kitkat', name: 'Kit Kat', price: 12.90, type: 'instant', category: 'esfihas-doces', desc: 'Chocolate com KitKat.', img: 'img/esfiha-kitkat.webp' },
-    { id: 'esf-prestigio', name: 'Prestígio', price: 12.90, type: 'instant', category: 'esfihas-doces', desc: 'Coco.', img: 'img/esfiha-prestigio.webp' },
-    { id: 'esf-brigadeiro', name: 'Brigadeiro', price: 12.90, type: 'instant', category: 'esfihas-doces', desc: 'Granulado.', img: 'img/esfiha-brigadeiro.webp' },
-    { id: 'esf-chocolate', name: 'Chocolate Preto', price: 9.90, type: 'instant', category: 'esfihas-doces', desc: 'Ao leite.', img: 'img/esfiha-chocolate.webp' },
-    { id: 'esf-sonho', name: 'Sonho de Valsa', price: 12.90, type: 'instant', category: 'esfihas-doces', desc: 'Bombom.', img: 'img/esfiha-sonho.webp' },
-    { id: 'esf-mms', name: 'M&Ms', price: 12.90, type: 'instant', category: 'esfihas-doces', desc: 'Confetes.', img: 'img/esfiha-mms.webp' },
-    { id: 'esf-choco-branco', name: 'Chocolate Branco', price: 9.90, type: 'instant', category: 'esfihas-doces', desc: 'Galak.', img: 'img/esfiha-choco-branco.webp' },
+    { id: 'esf-doce-leite', name: 'Doce de Leite', price: 12.90, type: 'instant', category: 'esfihas-doces', desc: 'Argentino.', img: 'img/7-esfiha-doce.webp' },
+    { id: 'esf-kitkat', name: 'Kit Kat', price: 12.90, type: 'instant', category: 'esfihas-doces', desc: 'Chocolate com KitKat.', img: 'img/7-esfiha-kitkat.webp' },
+    { id: 'esf-prestigio', name: 'Prestígio', price: 12.90, type: 'instant', category: 'esfihas-doces', desc: 'Coco.', img: 'img/7-esfiha-prestigio.webp' },
+    { id: 'esf-brigadeiro', name: 'Brigadeiro', price: 12.90, type: 'instant', category: 'esfihas-doces', desc: 'Granulado.', img: 'img/7-esfiha-brigadeiro.webp' },
+    { id: 'esf-chocolate', name: 'Chocolate Preto', price: 9.90, type: 'instant', category: 'esfihas-doces', desc: 'Ao leite.', img: 'img/7-esfiha-chocolate.webp' },
+    { id: 'esf-sonho', name: 'Sonho de Valsa', price: 12.90, type: 'instant', category: 'esfihas-doces', desc: 'Bombom.', img: 'img/7-esfiha-sonho.webp' },
+    { id: 'esf-mms', name: 'M&Ms', price: 12.90, type: 'instant', category: 'esfihas-doces', desc: 'Confetes.', img: 'img/7-esfiha-mms.webp' },
+    { id: 'esf-choco-branco', name: 'Chocolate Branco', price: 9.90, type: 'instant', category: 'esfihas-doces', desc: 'Galak.', img: 'img/7-esfiha-Chocolate Branco.webp' },
 
     // --- SEÇÃO 8: PASTÉIS ---
-    { id: 'pastel-carne', name: 'Pastel de Carne', price: 14.90, type: 'instant', category: 'pasteis', desc: 'Carne temperada.', img: 'img/pastel-carne.webp' },
-    { id: 'pastel-carne-ovo', name: 'Carne c/ Ovo', price: 16.90, type: 'instant', category: 'pasteis', desc: 'Carne e ovo.', img: 'img/pastel-carne-ovo.webp' },
-    { id: 'pastel-carne-queijo', name: 'Carne c/ Queijo', price: 16.90, type: 'instant', category: 'pasteis', desc: 'Carne e queijo.', img: 'img/pastel-carne-queijo.webp' },
-    { id: 'pastel-costela', name: 'Costela c/ Queijo', price: 15.90, type: 'instant', category: 'pasteis', desc: 'Costela desfiada.', img: 'img/pastel-costela.webp' },
-    { id: 'pastel-frango', name: 'Pastel de Frango', price: 14.90, type: 'instant', category: 'pasteis', desc: 'Frango desfiado.', img: 'img/pastel-frango.webp' },
-    { id: 'pastel-frango-cat', name: 'Frango c/ Catupiry', price: 15.90, type: 'instant', category: 'pasteis', desc: 'Cremoso.', img: 'img/pastel-frango-cat.webp' },
-    { id: 'pastel-frango-ovo', name: 'Frango c/ Ovo', price: 15.90, type: 'instant', category: 'pasteis', desc: 'Frango e ovo.', img: 'img/pastel-frango-ovo.webp' },
-    { id: 'pastel-frango-queijo', name: 'Frango c/ Queijo', price: 15.90, type: 'instant', category: 'pasteis', desc: 'Frango e queijo.', img: 'img/pastel-frango-queijo.webp' },
-    { id: 'pastel-frango-trio', name: 'Frango, Queijo e Catupiry', price: 16.90, type: 'instant', category: 'pasteis', desc: 'Completo.', img: 'img/pastel-frango-trio.webp' },
-    { id: 'pastel-presunto', name: 'Bauru (Presunto e Queijo)', price: 15.90, type: 'instant', category: 'pasteis', desc: 'Misto.', img: 'img/pastel-presunto.webp' },
-    { id: 'pastel-queijo', name: 'Pastel de Queijo', price: 14.90, type: 'instant', category: 'pasteis', desc: 'Mussarela.', img: 'img/pastel-queijo.webp' },
+    { id: 'pastel-carne', name: 'Pastel de Carne', price: 14.90, type: 'instant', category: 'pasteis', desc: 'Carne temperada.', img: 'img/8-pastel-carne.webp' },//falta img//
+    { id: 'pastel-carne-ovo', name: 'Carne c/ Ovo', price: 16.90, type: 'instant', category: 'pasteis', desc: 'Carne e ovo.', img: 'img/8-pastel-carne-ovo.webp' },//falta img//
+    { id: 'pastel-carne-queijo', name: 'Carne c/ Queijo', price: 16.90, type: 'instant', category: 'pasteis', desc: 'Carne e queijo.', img: 'img/8-pastel-carne-queijo.webp' },
+    { id: 'pastel-costela', name: 'Costela c/ Queijo', price: 15.90, type: 'instant', category: 'pasteis', desc: 'Costela desfiada.', img: 'img/8-pastel-costela.webp' },
+    { id: 'pastel-frango', name: 'Pastel de Frango', price: 14.90, type: 'instant', category: 'pasteis', desc: 'Frango desfiado.', img: 'img/8-pastel-frango.webp' },
+    { id: 'pastel-frango-cat', name: 'Frango c/ Catupiry', price: 15.90, type: 'instant', category: 'pasteis', desc: 'Cremoso.', img: 'img/8-pastel-frango-catupiry.webp' },
+    { id: 'pastel-frango-ovo', name: 'Frango c/ Ovo', price: 15.90, type: 'instant', category: 'pasteis', desc: 'Frango e ovo.', img: 'img/8-pastel-frango-ovo.webp' },
+    { id: 'pastel-frango-queijo', name: 'Frango c/ Queijo', price: 15.90, type: 'instant', category: 'pasteis', desc: 'Frango e queijo.', img: 'img/8-pastel-frango-queijo.webp' },
+    { id: 'pastel-frango-trio', name: 'Frango, Queijo e Catupiry', price: 16.90, type: 'instant', category: 'pasteis', desc: 'Completo.', img: 'img/8-pastel-frango-catupiry.webp' },
+    { id: 'pastel-presunto', name: 'Bauru (Presunto e Queijo)', price: 15.90, type: 'instant', category: 'pasteis', desc: 'Misto.', img: 'img/8-pastel-presunto.webp' },
+    { id: 'pastel-queijo', name: 'Pastel de Queijo', price: 14.90, type: 'instant', category: 'pasteis', desc: 'Mussarela.', img: 'img/8-pastel-queijo.webp' },
 
     // --- SEÇÃO 9: ESPECIAIS & COMBOS ---
-    { id: 'combo-pizza-2queijos', name: 'Combo: 2 Queijos + Coca 2L', price: 59.90, oldPrice: 75.00, discount: 'OFERTA', type: 'instant', category: 'pizza-specials', desc: 'Pizza Grande + Coca 2L.', img: 'img/combo-pizza.webp' },
-    { id: 'combo-pizza-portuguesa', name: 'Combo: Portuguesa + Coca 2L', price: 59.90, oldPrice: 75.00, discount: 'OFERTA', type: 'instant', category: 'pizza-specials', desc: 'Pizza Grande + Coca 2L.', img: 'img/combo-pizza.webp' },
-    { id: 'combo-pizza-strog', name: 'Combo: Strogonoff + Coca 2L', price: 59.90, oldPrice: 79.90, discount: 'OFERTA', type: 'instant', category: 'pizza-specials', desc: 'Pizza Grande + Coca 2L.', img: 'img/combo-pizza.webp' },
-    { id: 'pizza-bolonhesa-grande', name: 'Pizza Bolonhesa (8 Pedaços)', price: 79.80, type: 'pizza-builder', category: 'pizza-specials', desc: 'Molho especial.', mode: 'whole', size: 'grande', img: 'img/pizza-bolonhesa.webp' },
-    { id: 'pizza-strog-media', name: 'Strogonoff (6 Pedaços)', price: 65.80, type: 'instant', category: 'pizza-specials', desc: 'Batata palha.', img: 'img/pizza-strogonoff.webp' },
-    { id: 'pizza-2queijos-grande', name: '2 Queijos (8 Pedaços)', price: 65.80, type: 'pizza-builder', category: 'pizza-specials', desc: 'Mussarela e Catupiry.', mode: 'whole', size: 'grande', img: 'img/pizza-2queijos.webp' },
-    { id: 'pizza-portuguesa-grande', name: 'Portuguesa (8 Pedaços)', price: 64.80, type: 'pizza-builder', category: 'pizza-specials', desc: 'Tradicional.', mode: 'whole', size: 'grande', img: 'img/pizza-portuguesa.webp' },
+    { id: 'combo-pizza-2queijos', name: 'Combo: 2 Queijos + Coca 2L', price: 59.90, oldPrice: 75.00, discount: 'OFERTA', type: 'instant', category: 'pizza-specials', desc: 'Pizza Grande + Coca 2L.', img: 'img/9-combo-pizza1.webp' },
+    { id: 'combo-pizza-portuguesa', name: 'Combo: Portuguesa + Coca 2L', price: 59.90, oldPrice: 75.00, discount: 'OFERTA', type: 'instant', category: 'pizza-specials', desc: 'Pizza Grande + Coca 2L.', img: 'img/9-combo-pizza2.webp' },
+    { id: 'combo-pizza-strog', name: 'Combo: Strogonoff + Coca 2L', price: 59.90, oldPrice: 79.90, discount: 'OFERTA', type: 'instant', category: 'pizza-specials', desc: 'Pizza Grande + Coca 2L.', img: 'img/9-combo-pizza3.webp' },
+    { id: 'pizza-bolonhesa-grande', name: 'Pizza Bolonhesa (8 Pedaços)', price: 79.80, type: 'pizza-builder', category: 'pizza-specials', desc: 'Molho especial.', mode: 'whole', size: 'grande', img: 'img/9-combo-pizza4.webp' },
+    { id: 'pizza-strog-media', name: 'Strogonoff (6 Pedaços)', price: 65.80, type: 'instant', category: 'pizza-specials', desc: 'Batata palha.', img: 'img/9-combo-pizza5.webp' },
+    { id: 'pizza-2queijos-grande', name: '2 Queijos (8 Pedaços)', price: 65.80, type: 'pizza-builder', category: 'pizza-specials', desc: 'Mussarela e Catupiry.', mode: 'whole', size: 'grande', img: 'img/9-combo-pizza6.webp' },
+    { id: 'pizza-portuguesa-grande', name: 'Portuguesa (8 Pedaços)', price: 64.80, type: 'pizza-builder', category: 'pizza-specials', desc: 'Tradicional.', mode: 'whole', size: 'grande', img: 'img/9-combo-pizza7.webp' },
 
     // --- SEÇÃO 10: BEBIDAS ---
     { id: 'beb-fanta-laranja', name: 'Fanta Laranja 350ml', price: 7.50, type: 'instant', category: 'drinks', img: 'img/fanta-laranja.webp' },
@@ -592,28 +594,62 @@ function prevWizardStep() {
 }
 
 // === 11. CHECKOUT WHATSAPP ===
+
 function sendToWhatsApp() {
     const name = document.getElementById('cust-name').value;
     const phone = document.getElementById('cust-phone').value;
     const address = document.getElementById('cust-address').value;
     const payment = document.getElementById('cust-payment').value;
+    
+    if(!name || !address || !payment) {
+        alert("Por favor, preencha os dados de entrega.");
+        return;
+    }
 
-    if (!name || !address || !payment) { alert("Preencha os dados de entrega."); return; }
+    // Gera o ID do pedido (4 dígitos)
+    const orderId = Math.floor(1000 + Math.random() * 9000);
+    
+    // === MENSAGEM LIMPA (SEM EMOJIS) ===
+    let text = `*NOVO PEDIDO DO SITE* (#${orderId})\n\n`;
+    text += `*Cliente:* ${name}\n`;
+    text += `*Telefone:* ${phone}\n`;
+    text += `*Endereco:* ${address}\n`;
+    text += `*Pagamento:* ${payment}\n`;
+    text += `--------------------------------\n`;
+    text += `*ITENS DO PEDIDO:*\n\n`;
 
-    let text = `🔔 *NOVO PEDIDO* (#${Math.floor(Math.random() * 9000)})\n`;
-    text += `👤 ${name}\n📞 ${phone}\n📍 ${address}\n💳 ${payment}\n\n`;
+    cart.forEach(item => {
+        // Usa apenas um traço (-) em vez de bolinhas ou desenhos
+        text += `- ${item.qty}x ${item.name}\n`;
 
-    cart.forEach(i => {
-        text += `▪️ ${i.qty}x ${i.name}\n`;
-        if (i.type === 'combo-pack') text += `   > ${i.details.flavors.join(', ')}\n`;
-        if (i.type === 'pizza-custom') text += `   > ${i.details.flavors}\n   > Borda: ${i.details.edge}\n`;
-        if (i.type === 'kit-festa') text += `   > Entregar: ${i.details.date} às ${i.details.time}\n`;
+        // Detalhes (Sem setinhas, apenas recuo)
+        if (item.type === 'combo-pack') {
+            text += `   (Sabores: ${item.details.flavors.join(', ')})\n`;
+        }
+        if (item.type === 'pizza-custom') {
+            text += `   (Sabores: ${item.details.flavors})\n`;
+            text += `   (Borda: ${item.details.edge})\n`;
+        }
+        if (item.type === 'kit-festa') {
+            text += `   (Salgados: ${item.details.savory.join(', ')})\n`;
+            text += `   (Doces: ${item.details.sweets.join(', ')})\n`;
+            text += `   (Data: ${item.details.date} as ${item.details.time})\n`;
+        }
+        text += `\n`; // Pula linha entre itens
     });
 
-    const total = cart.reduce((a, b) => a + (b.price * b.qty), 0);
-    text += `\n💰 *Total: R$ ${total.toFixed(2).replace('.', ',')}*`;
+    const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+    
+    text += `--------------------------------\n`;
+    text += `*TOTAL FINAL: R$ ${total.toFixed(2).replace('.', ',')}*\n`;
+    
+    // Codifica para URL (Isso evita bugs de caracteres estranhos)
+    const encodedText = encodeURIComponent(text);
+    
+    // SEU NÚMERO AQUI (Apenas números)
+    const whatsappNumber = "554384137743"; 
 
-    window.open(`https://wa.me/55999999999?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedText}`, '_blank');
 }
 
 function setupPhoneMask() {

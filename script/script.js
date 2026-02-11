@@ -253,7 +253,7 @@ function renderProducts(filter) {
             grid.insertAdjacentHTML('beforeend', `
                 <article class="product-card" onclick="openComboModal('${p.id}')">
                     ${discountBadge}
-                    <div class="card-img-wrapper"><img src="${p.img}" loading="lazy"></div>
+                    <div class="card-img-wrapper"><img src="${p.img}" loading="lazy" alt="${p.name}"></div>
                     <h3>${p.name}</h3><p class="desc">${p.desc}</p>
                     <div class="card-footer">${priceDisplay}<button class="btn btn-gold btn-sm">MONTAR</button></div>
                 </article>
@@ -263,7 +263,7 @@ function renderProducts(filter) {
         else if (p.type === 'pizza-builder') {
             grid.insertAdjacentHTML('beforeend', `
                 <article class="product-card" onclick="openPizzaModal('${p.mode}', '${p.size}', ${p.isSweet || false})">
-                    <div class="card-img-wrapper"><img src="${p.img}" loading="lazy"></div>
+                    <div class="card-img-wrapper"><img src="${p.img}" loading="lazy" alt="${p.name}"></div>
                     <h3>${p.name}</h3><p class="desc">${p.desc}</p>
                     <div class="card-footer"><span class="price">A partir de R$ ${p.price.toFixed(2).replace('.', ',')}</span><button class="btn btn-gold btn-sm">MONTAR</button></div>
                 </article>
@@ -276,7 +276,7 @@ function renderProducts(filter) {
             grid.insertAdjacentHTML('beforeend', `
                 <article class="product-card ${selectedClass}" data-id="${p.id}">
                     ${discountBadge}
-                    <div class="card-img-wrapper"><img src="${p.img}" loading="lazy"></div>
+                    <div class="card-img-wrapper"><img src="${p.img}" loading="lazy" alt="${p.name}"></div>
                     <h3>${p.name}</h3><p class="desc">${p.desc}</p>
                     <div class="card-footer">${priceDisplay}
                     <div class="qty-control">

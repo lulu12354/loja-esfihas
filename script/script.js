@@ -1,7 +1,3 @@
-/* =========================================
-   GOURMET TRIPLE-FLOW | SCRIPT.JS
-   Versão: Full Release (Sem Abreviações)
-   ========================================= */
 
 // === 1. LISTAS AUXILIARES DE SABORES ===
 const SABORES_ESFIHA_TODOS = [
